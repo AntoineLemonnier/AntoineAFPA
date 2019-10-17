@@ -1,0 +1,207 @@
+<HTML>
+
+	<HEAD>
+		<title>morpion</title>
+		<meta charset="utf-8">
+		<link rel="stylesheet" href="tableau.css">
+
+		
+	</HEAD>
+
+	<BODY>
+
+		<img id="logo" src ="morpion.jpg" alt=""/>
+		<div id = "joueur1">
+			<h2 id="Joueur1" onclick="pseudo(this)">Joueur 1</h2>
+			<img id="Perso1" src ="personnage 2.jpg" alt=""/>
+			<h2 id = "score1">0</h2>
+		</div>
+		<div id = "Joueur2">
+			<h2 id="Joueur2" onclick="pseudo(this)">Joueur 2</h2>
+			<img id="Perso1" src ="personnage 1.jpg" alt=""/>
+			<h2 id ="score2">0</h2>
+		</div>
+		<table>
+			<tr id = tablo>
+				<td id = "1" onclick="croix_rond(this, 'red')"></td>
+				<td id = "2" onclick="croix_rond(this, 'red')"></td>
+				<td id = "3" onclick="croix_rond(this, 'red')"></td>
+			</tr>
+			<tr>
+				<td id = "4" onclick="croix_rond(this, 'red')"></td>
+				<td id = "5" onclick="croix_rond(this, 'red')"></td>
+				<td id = "6" onclick="croix_rond(this, 'red')"></td>
+			</tr>
+			<tr>
+				<td id = "7" onclick="croix_rond(this, 'red')"></td>
+				<td id = "8" onclick="croix_rond(this, 'red')"></td>
+				<td id = "9" onclick="croix_rond(this, 'red')"></td>
+			</tr>
+</table>
+			<script type="text/javascript">
+
+				var signe = true;
+				var valeur =0;
+				var case_libre = 0;
+
+				//Fonction qui permet de modifier le pseudo du joueur
+				function pseudo(elmnt){
+					var pseudo = prompt("Choisiez un pseudo");
+					elmnt.innerHTML = pseudo;
+
+				}
+				// Fonction qui permet d'introduire des rond ou des croix dans les cellules du tableau, permet également d'interdire de rejouer sur une cellule
+				function croix_rond(elmnt,clr) {					
+						valeur ++;
+							if(elmnt.innerHTML.length == 0){
+  								if (signe == true ){
+  									elmnt.style.color = clr;
+  									elmnt.innerHTML = "X";
+  									signe = false;
+  									ligne
+  									(elmnt);
+  									
+
+  								}
+  									
+  								
+  								else {
+  									elmnt.style.color = clr;
+  									elmnt.innerHTML = "O";
+  									signe = true;
+  									ligne(elmnt);
+  									
+  								}
+  							}
+  					}
+  											
+				
+				function ligne(elmnt){
+					var pseudo1 = document.getElementById("Joueur1").textContent;
+					var pseudo2 = document.getElementById("Joueur2").textContent;
+
+					var un = document.getElementById("1").textContent;
+					var deux = document.getElementById("2").textContent;
+					var trois = document.getElementById("3").textContent;
+
+					var quatre = document.getElementById("4").textContent;
+					var cinq = document.getElementById("5").textContent;
+					var six = document.getElementById("6").textContent;
+
+					var sept = document.getElementById("7").textContent;
+					var huit = document.getElementById("8").textContent;
+					var neuf = document.getElementById("9").textContent;
+
+
+						if(un === deux && un === trois && un!= ""){
+							if (un ==="X"){
+								alert("Bravo "+ pseudo1);
+								document.getElementById("score1").textContent = +1;
+							}
+							else{
+								alert("Bravo " + pseudo2);
+							}
+							
+						}
+						if(quatre === cinq && quatre === six && quatre!= ""){
+							if (quatre ==="X"){
+								alert("Bravo "+ pseudo1);
+
+							}
+							else{
+								alert("Bravo " + pseudo2);
+							}
+						}
+						if(sept === huit && sept === neuf && sept!= ""){
+							if (sept ==="X"){
+								alert("Bravo "+ pseudo1);
+							}
+							else{
+								alert("Bravo " + pseudo2);
+							}
+						}
+						if(un === quatre && un === sept && un!= ""){
+							if (un ==="X"){
+								alert("Bravo "+ pseudo1);
+							}
+							else{
+								alert("Bravo " + pseudo2);
+							}
+						}
+						if(deux === cinq && deux === six && deux!= ""){
+							if (deux ==="X"){
+								alert("Bravo "+ pseudo1);
+							}
+							else{
+								alert("Bravo " + pseudo2);
+							}
+						}
+						if(trois === six && trois === neuf && trois!= ""){
+							if (trois ==="X"){
+								alert("Bravo "+ pseudo1);
+							}
+							else{
+								alert("Bravo " + pseudo2);
+							}
+						}
+						if(un === cinq && un === neuf && un!= ""){
+							if (un ==="X"){
+								alert("Bravo "+ pseudo1);
+							}
+							else {
+								alert("Bravo " + pseudo2);
+							}
+						}
+						if(trois === cinq && trois === sept && trois!= ""){
+							if (trois ==="X"){
+								alert("Bravo "+ pseudo1);
+							}
+							else{
+								alert("Bravo " + pseudo2);
+							}
+						}
+			
+
+		
+
+
+				}
+				// code final afin de tester les combinaisons possible 
+
+				//function victoire(){
+					//var case1 = document.getElementId() 
+					
+				//}
+						
+				
+				
+ 
+			</script>
+
+		
+		
+	</BODY>
+
+</HTML>
+
+
+
+
+<script>
+/*Coder un jeu du morpion. 
+Créez un tableau de 3x3 
+
+Créez une fonction qui initialise le tableau et les scores des joueurs 1 et 2 
+
+Créez une fonction qui affiche le tableau comme une grille de morpion 
+
+Créez une fonction qui permet d'assigner un pion du joueur 1 ou du joueur 2 
+
+ 	dans une case (coordonnées X;Y) 
+
+Créez une fonction qui vérifie si la partie est gagnée 
+
+Créez une fonction qui vérifie si la partie est nulle (plus possible de remplir le tableau) */
+
+
+</script>

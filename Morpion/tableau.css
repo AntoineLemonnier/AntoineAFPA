@@ -1,0 +1,45 @@
+table{
+	margin:auto;
+	border: 6px solid black;
+	padding:50px;
+	text-align: center;
+	border-radius:20px;
+	font-size: 50px;
+	font-family:Comic Sans MS;
+
+}
+
+td{
+	margin:auto;
+	border: 6px solid black;
+	padding:50px;
+	text-align: center;
+	border-radius:0px;
+	font-size: 50px;
+	font-family:Comic Sans MS;
+	border : solid 5px #EC9785;
+	
+}
+h2{
+	font-family:Comic Sans MS;
+	display:inline;
+
+}
+#joueur1{ 
+	width: 300px;
+	position: fixed;
+	left:200px;
+	font-family:Comic Sans MS;
+
+}
+#joueur2{
+	width: 300px;
+	position: fixed;
+	right: 200px;
+	font-family:Comic Sans MS;
+}
+#logo{
+	margin-left: 765px;
+	margin-right: auto;
+	width:20em;
+}

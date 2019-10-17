@@ -1,0 +1,28 @@
+table{
+    border: 10px solid #8B541D;
+    background-color: #8B541D;
+    width: 500px;
+    height: 500px;
+}
+
+td{
+    border: 0px solid black;
+    border-collapse: collapse;
+    background-color: black;
+    white-space: nowrap;
+    min-width: 75px;
+    height: 75px;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 64px;
+}
+
+
+.classe1{
+	background-color: white;
+	border-color: white;
+}
+#1{
+	color:red;
+}
+

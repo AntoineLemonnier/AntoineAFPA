@@ -1,0 +1,72 @@
+<script>
+	// tableau initialisé de 10mots
+	var pendu = new Array("animal","banane","chien","canape","tornade","croissant","abeille","batiment","jeanmiedutreize")
+	var alea = new Array();
+
+	// variable qui prend aléatoirement l'un des mots
+	var motAleatoire = pendu[Math.floor(Math.random()*pendu.length)];
+
+	// on découpe ensuite le mot par lettre
+	var decoupe = new Array();
+	var longueur = motAleatoire.length -1;
+		for (var i =0; i<=longueur; i++){
+			decoupe.push(motAleatoire[i]);
+			
+		}
+		console.log(decoupe);
+
+	//on créer ensuite un double du mot version en utilisant des _ utilisation du foreach
+	var longueurMotAlea = parseInt(motAleatoire.length);
+	var tableau_ = new Array()
+	for(var b =0; b !== longueurMotAlea; b++){
+		tableau_.push('-');
+		
+	}
+	console.log(tableau_);
+
+	// variable contenant le nombre d'essai, ainsi qu'une variable testeur
+
+	// On rentre ensuite dans la partie code
+	var gagne = 0;
+	for(var essai =6; essai !== 0; essai-- ){
+		var reponse =prompt("Saisiez une lettre, attention il te reste " + essai +" chances" + "    " + tableau_);
+		var verdict = decoupe.includes(reponse);
+		if (verdict== true){
+			essai++;
+			console.log("effectivement la lettre " + reponse + " est bien dans le mot.");
+			//Remplace les - par les lettre de la bonne reponse
+
+			//La fonction index cherche la position de la bonne reponse
+			var index = decoupe.indexOf(reponse)
+			// la boucle va permettre de determine si la lettre existe en doublons ou plus
+			while (index != -1){
+				//Splice va chercher grace a lindex la position, supprime le - pour mettre la lettre
+				var remplace = tableau_.splice(index,1,reponse);
+				decoupe.splice(index,1,"*")
+				index = decoupe.indexOf(reponse)
+				gagne++;
+
+			}
+
+			if (gagne == longueurMotAlea){
+				alert("Bravo ta gagné " + tableau_);
+				break;
+			}
+			
+		}
+		else if (verdict== false) {
+			console.log("Non "+ reponse + " ne se trouve pas dans le mot");
+			
+
+		}
+	
+	}
+	if (essai ==0){
+		alert("Perdu !!  " + motAleatoire )
+		
+	}
+	
+
+
+
+</script>
